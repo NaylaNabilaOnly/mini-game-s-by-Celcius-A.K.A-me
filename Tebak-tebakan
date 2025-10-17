@@ -1,0 +1,45 @@
+import random
+jawab = 'tidak'
+
+
+welcome_message = "TEBAK-TEBAKAN KW"
+posisi_Kelereng = random.randint(1, 4)
+
+print("==========================")
+print(f"====={welcome_message}=====")
+print("==========================")
+
+nama_user = input("Masukan nama kamu: ")
+print(f'''
+Hallo,{nama_user}! Maukah kamu bermain bersama Celcius? (iya / tidak)
+''')
+inputan_user = input("Masukan jawaban mu disini => ")
+
+pilihan_yesno = 'tidak'
+
+if pilihan_yesno == inputan_user :
+    print("aku memaksa mu bermain broo")
+else:
+    print("Oh")
+
+print(f'''
+Coba Perhatian kerucut dibawah ini!
+/_\ /_\ /_\ /_\ 
+''')
+
+pilihan_user = print("Dimanakah Kelereng itu berada? Pilih salah satu dari nomor berikut 1 / 2 / 3 / 4: ")
+jawaban_user = int(input("Masukan jawabnmu disini=> "))
+input("apakah kamu yakin kamu memilih nomor tersebut? ( Yakin / Tidak) : ")
+
+while(jawab == 'tidak'):
+    jawab = input("serius ini? ")
+
+print(f'''
+baiklah karena kamu menjawab {jawab} ayo tetap bermain!
+''')
+
+if pilihan_user == posisi_Kelereng:
+    print(f"Selamat {nama_user} kamu menang! Posisi keleng ada di nomor {posisi_Kelereng} dan nomor pilihan mu adalah {pilihan_user}")
+else:
+    print(f"kamu kalah! kelereng tidak berada di sana, tetapi kelereng berada di bangunan krucut nomor {posisi_Kelereng}. Sedangkan kamu memilih nomor {pilihan_user}")
+
